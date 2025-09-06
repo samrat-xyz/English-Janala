@@ -7,6 +7,10 @@
     <!-- Tailwind & DasiyUI cdn link -->
     <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <!-- Font awesome cdn -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <!-- Google Font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -19,7 +23,57 @@
 </head>
 
 <body>
+    <header>
+        <nav class="flex items-center justify-between px-6 py-3 bg-[#badeff42]">
+            <div class="flex items-center">
+                <span class="text-2xl font-bold">English</span>
+                <img src="./assets/logo.png" alt="">
+                <span class="text-xl font-bold font-bangla">জানালা</span>
+            </div>
 
+            <!-- Mobile Menu -->
+            <div class="md:hidden">
+                <!-- NOTE: added dropdown-end -->
+                <div class="dropdown dropdown-end">
+                    <div tabindex="0" role="button" class="btn btn-ghost btn-circle" aria-label="Open menu">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 6h16M4 12h16M4 18h7" />
+                        </svg>
+                    </div>
+
+                    <ul tabindex="0"
+                        class="menu menu-sm dropdown-content mt-3 z-[100] w-52 p-2 shadow bg-base-100 rounded-box">
+                        <li><a><i class="fa-solid fa-circle-question"></i> FAQ</a></li>
+                        <li><a><i class="fa-solid fa-book-open"></i> Learn</a></li> <!-- fixed stray </button> -->
+                        <li><a><i class="fa-solid fa-right-from-bracket"></i> Logout</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="hidden md:block text-md space-x-4">
+                <button class="px-3 py-1 border-2 border-blue-800 rounded-lg cursor-pointer font-bold
+           transition duration-300 ease-in-out 
+           hover:bg-blue-800 hover:text-white hover:scale-105">
+                    <i class="fa-solid fa-circle-question"></i> FAQ
+                </button>
+
+                <button class="px-3 py-1 border-2 border-blue-800 rounded-lg cursor-pointer font-bold
+           transition duration-300 ease-in-out 
+           hover:bg-blue-800 hover:text-white hover:scale-105">
+                    <i class="fa-solid fa-book-open"></i> Learn
+                </button>
+
+                <button class="px-3 py-1 border-2 border-blue-800 rounded-lg cursor-pointer font-bold
+           transition duration-300 ease-in-out 
+           hover:bg-blue-800 hover:text-white hover:scale-105">
+                    <i class="fa-solid fa-right-from-bracket"></i> Logout
+                </button>
+            </div>
+
+        </nav>
+    </header>
 </body>
 
 </html>
